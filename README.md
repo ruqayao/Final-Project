@@ -1,7 +1,7 @@
 # Final-Project
 # Fitness Tracker Data Analysis
 **INFO-B 211: Information Infrastructure II**
-Luddy School of Informatics, Computing, and Engineering — Indiana University Indianapolis
+Luddy School of Informatics, Computing, and Engineering - Indiana University Indianapolis
 
 ---
 
@@ -9,11 +9,11 @@ Luddy School of Informatics, Computing, and Engineering — Indiana University I
 
 | Name | Research Question |
 |------|-------------------|
-| Sebastian Lucio | RQ1 — Which factors are the strongest predictors of calories burned during a workout? |
-| Mel-Neiqua Holloway | RQ2 — Do workout habits or biological characteristics have a greater impact on calorie expenditure? |
-| Qaliya Omar | RQ3 — How strongly is workout duration related to calories burned? |
-| Henry Adeogun | RQ4 — Which workout types are associated with the highest calorie expenditure? |
-| Mel-Neiqua Holloway | RQ5 — Does heart rate influence calorie burn more than body characteristics such as BMI? |
+| Sebastian Lucio | RQ1 - Which factors are the strongest predictors of calories burned during a workout? |
+| Mel-Neiqua Holloway | RQ2 - Do workout habits or biological characteristics have a greater impact on calorie expenditure? |
+| Qaliya Omar | RQ3 - How strongly is workout duration related to calories burned? |
+| Henry Adeogun | RQ4 - Which workout types are associated with the highest calorie expenditure? |
+| Mel-Neiqua Holloway | RQ5 - Does heart rate influence calorie burn more than body characteristics such as BMI? |
 
 ---
 
@@ -25,7 +25,7 @@ This project analyzes fitness tracker data to explore the relationships between 
 
 ## Dataset
 
-### Dataset — Calorie Burnt 15k (HuggingFace)
+### Dataset - Calorie Burnt 15k (HuggingFace)
 The dataset was sourced from HuggingFace and consists of two files that are merged on `User_ID`:
 
 | File | Contents |
@@ -37,26 +37,26 @@ The dataset was sourced from HuggingFace and consists of two files that are merg
 - **Missing values:** 0
 - **Merge key:** `User_ID`
 
-### Original Dataset — Gym Members Exercise Tracking (Kaggle)
+### Original Dataset - Gym Members Exercise Tracking (Kaggle)
 The group's original dataset (`gym_members_exercise_tracking_synthetic_data.csv`) was explored during early analysis but replaced due to a data quality issue: the `Calories_Burned` column was synthetically generated independently of all other variables, resulting in near-zero correlations (max r = 0.06) and negative R² scores across all models. The original dataset may still be referenced by other team members' sections.
 
 ---
 
 ## Research Questions & Methods
 
-**RQ1 — Strongest Predictors of Calories Burned**
+**RQ1 - Strongest Predictors of Calories Burned**
 Train Linear Regression and Decision Tree Regressor models on biometric and exercise data. Compare feature importance scores and coefficients. Evaluate with R² and MSE.
 
-**RQ2 — Workout Habits vs. Biological Characteristics**
-Build two separate models — one using only biological variables (Age, BMI, Height, Weight) and one using only workout variables (Duration, BPM, Workout Type) — and compare their R² scores.
+**RQ2 - Workout Habits vs. Biological Characteristics**
+Build two separate models - one using only biological variables (Age, BMI, Height, Weight) and one using only workout variables (Duration, BPM, Workout Type) - and compare their R² scores.
 
-**RQ3 — Workout Duration vs. Calories**
+**RQ3 - Workout Duration vs. Calories**
 Calculate the Pearson correlation coefficient between session duration and calories burned. Visualize with a scatter plot and regression line. Run a simple linear regression.
 
-**RQ4 — Calorie Burn by Workout Type**
+**RQ4 - Calorie Burn by Workout Type**
 Group the dataset by workout type and calculate average calories burned per category. Visualize using a bar chart and boxplot. Test statistical significance with a one-way ANOVA.
 
-**RQ5 — Heart Rate vs. BMI as Predictors**
+**RQ5 - Heart Rate vs. BMI as Predictors**
 Compare the Pearson correlations of Avg BPM and BMI with calories burned. Include both in a multiple regression model to evaluate their relative impact.
 
 ---
@@ -90,13 +90,13 @@ This project uses the following Python libraries covered in the course:
 
 ## Key Findings (RQ1)
 
-- **Linear Regression R²: 0.9673** — both models achieve very strong predictive accuracy, confirming that calorie burn is highly predictable from biometric and exercise data
+- **Linear Regression R²: 0.9673** - both models achieve very strong predictive accuracy, confirming that calorie burn is highly predictable from biometric and exercise data
 - **Decision Tree R²: 0.9616**
 - **Better model: Linear Regression** (lower MSE of 132.00 vs. 154.88)
 - **Top 3 predictors by feature importance (Decision Tree):**
-  1. Duration (strongest) — how long you exercise is by far the biggest driver of calorie burn
-  2. Heart Rate — intensity of effort matters more than body composition
-  3. Age — demographic factors have a smaller but measurable role compared to exercise behavior
+  1. Duration (strongest) - how long you exercise is by far the biggest driver of calorie burn
+  2. Heart Rate - intensity of effort matters more than body composition
+  3. Age - demographic factors have a smaller but measurable role compared to exercise behavior
 - Weight, Height, and Gender combined account for minimal predictive importance
 
 ---
