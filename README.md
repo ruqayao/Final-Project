@@ -103,5 +103,5 @@ This project uses the following Python libraries covered in the course:
 
 ## References
 
-- Calorie Burnt 15k Dataset. (2024). HuggingFace Datasets. https://huggingface.co/datasets
-- Majeed, N. (2024). Gym Members Exercise Tracking Synthetic Dataset. Kaggle. https://www.kaggle.com/datasets/nadeemajeedch/fitness-tracker-dataset
+- mnemoraorg. (2025). *Calorie Burnt 15k* HuggingFace. https://huggingface.co/datasets/mnemoraorg/calorie-burnt-15k
+- Majeed, N. (2025). *Gym Members Exercise Tracking Synthetic Dataset* Kaggle. https://www.kaggle.com/datasets/nadeemajeedch/fitness-tracker-dataset
