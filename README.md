@@ -99,6 +99,16 @@ This project uses the following Python libraries covered in the course:
   3. Age - demographic factors have a smaller but measurable role compared to exercise behavior
 - Weight, Height, and Gender combined account for minimal predictive importance
 
+## Key Findings (RQ3)
+
+- **Correlation Coefficient (r): 0.0286** - Indicates a very weak positive linear relationship between workout duration and calories burned in the main dataset.
+- **Linear Regression R²: 0.0008**
+- **Reference Data Comparison (R²: 0.9128)** - In contrast, the reference dataset shows a 91% dependency on duration, highlighting a significant discrepancy where the main dataset relies more on other factors like intensity.
+- **Predictive Equation:** - Calories = 25.15 X Duration (hrs) + 998.66
+- High Intercept (998.66): Indicates a high baseline of calories burned regardless of the session length.
+- Low Slope (25.15): Shows that adding extra time results in a relatively small increase in total burn compared to the baseline.
+**Conclusion:** - For this specific gym member population, "time spent" is not the primary driver of expenditure, implying that workout intensity (Heart Rate) or type likely carries more weight.
+
 ---
 
 ## References
