@@ -90,14 +90,13 @@ This project uses the following Python libraries covered in the course:
 
 ## Key Findings (RQ1)
 
-- **Linear Regression R²: 0.9673** - both models achieve very strong predictive accuracy, confirming that calorie burn is highly predictable from biometric and exercise data
-- **Decision Tree R²: 0.9616**
-- **Better model: Linear Regression** (lower MSE of 132.00 vs. 154.88)
-- **Top 3 predictors by feature importance (Decision Tree):**
-  1. Duration (strongest) - how long you exercise is by far the biggest driver of calorie burn
-  2. Heart Rate - intensity of effort matters more than body composition
-  3. Age - demographic factors have a smaller but measurable role compared to exercise behavior
-- Weight, Height, and Gender combined account for minimal predictive importance
+- **Linear Regression R²: 0.9673** and **Random Forest R²: 0.9982** - both models achieve very strong predictive accuracy, confirming that calorie burn is highly predictable from biometric and exercise data
+- **Better model: Random Forest** (RMSE of 2.68 calories vs. 11.49 for Linear Regression)
+- **Top 3 predictors by feature importance (Random Forest):**
+  1. Duration (0.9139) - how long you exercise is by far the biggest driver of calorie burn
+  2. Heart Rate (0.0483) - intensity of effort matters more than body composition
+  3. Age (0.0263) - demographic factors have a smaller but measurable role
+- Weight, Height, and Gender combined account for less than 5% of predictive importance
 
 ## Key Findings (RQ3)
 
@@ -108,6 +107,14 @@ This project uses the following Python libraries covered in the course:
 - **High Intercept (998.66):** Indicates a high baseline of calories burned regardless of the session length.
 - **Low Slope (25.15):** Shows that adding extra time results in a relatively small increase in total burn compared to the baseline.
 - **Conclusion:** For this specific gym member population, "time spent" is not the primary driver of expenditure, implying that workout intensity (Heart Rate) or type likely carries more weight.
+
+## Key Findings (RQ4)
+
+- **Dataset:** Gym Members Exercise Tracking (Kaggle), 1,717 records across 4 workout types
+- **Average calories burned by type:** Yoga (1,067.47) > Cardio (1,047.76) > Strength (1,016.50) > HIIT (1,005.00)
+- **Median calories burned by type:** Yoga (1,070) > Cardio (1,057) > Strength (993) > HIIT (1,005)
+- **One-way ANOVA:** F-statistic = 3.19, p-value = 0.023 - differences are statistically significant (p < 0.05)
+- **Conclusion:** While statistically significant, the practical difference between workout types is small (~62 calories between Yoga and HIIT). Workout type alone is not a strong driver of calorie burn compared to duration and intensity.
 
 ---
 
